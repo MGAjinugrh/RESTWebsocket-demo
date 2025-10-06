@@ -144,6 +144,19 @@ nohup ./Library > library.log 2>&1 &
 
 ---
 
+## 🧠 RESTful API Testing
+
+Using Postman, import the collection under :
+
+```
+RESTWebsocket-demo/
+│
+└── PostmanCollection/
+    └── library-demo.postman_collection.json        # Set this collection on your Postman
+```
+
+Then you could try running one of the requests there.
+
 ## 🧠 WebSocket Testing
 
 Once the Library API is running, connect to the WebSocket endpoint:
@@ -213,6 +226,7 @@ You can adjust ports inside each app’s `appsettings.json`.
 - Each app manages its own `DbContext` but shares entity definitions from the **Shared** project.
 - No token or JWT is required for this demo — user validation is based on `userId` and role check from DB.
 - The system is designed to run **independently** but can communicate logically as part of a microservice ecosystem.
+- Always run the Management.dll before running Library.dll. Management.dll would generate admins as well as roles
 
 ---
 

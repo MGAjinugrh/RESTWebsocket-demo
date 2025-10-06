@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "bebecab2-81ee-46f4-a012-9e17fe039141",
+		"name": "library-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14053618",
+		"_collection_link": "https://speeding-space-209190.postman.co/workspace/MG-Workspace~7ec85689-f2fc-4ff7-8fd4-85bc094cbfa2/collection/14053618-bebecab2-81ee-46f4-a012-9e17fe039141?action=share&source=collection_link&creator=14053618"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{management_url}}/api/account",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{management_url}}/api/account/7",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Exist",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "{{management_url}}/api/account/5",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"roleid\": 2,\r\n    \"username\" : \"member6\",\r\n    \"password\" : \"123\",\r\n    \"rePassword\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{management_url}}/api/account",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"1231\",\r\n    \"rePassword\" : \"1231\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{management_url}}/api/account/1/password",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"1",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Active",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{management_url}}/api/account/3/toggle-active",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"3",
+								"toggle-active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete (Irreversible)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{management_url}}/api/account/3",
+							"host": [
+								"{{management_url}}"
+							],
+							"path": [
+								"api",
+								"account",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "user",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{library_url}}/api/book",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{library_url}}/api/book/5",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check if Exist",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "{{library_url}}/api/book/5",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Book of C\",\r\n    \"author\" : \"Wayne Smith\",\r\n    \"datePublished\" : \"2009-02-02T00:00:00.000\",\r\n    \"summary\" : \"Learn C from beginning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{library_url}}/api/book",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Edensor\",\r\n    \"author\" : \"John Wayne\",\r\n    \"datePublished\" : \"2009-12-02T00:00:00.000\",\r\n    \"summary\" : \"Tale of a Man called Edensor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{library_url}}/api/book/5",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Active",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{library_url}}/api/book/2/toggle-active",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"2",
+								"toggle-active"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toggle Availability",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{library_url}}/api/book/1/toggle-availability",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"1",
+								"toggle-availability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete (Irreversible)",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "userId",
+								"value": "1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{library_url}}/api/book/1",
+							"host": [
+								"{{library_url}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
