@@ -77,7 +77,7 @@ public class AccountController : ControllerBase
             ReturnStatus.Duplicate => Conflict(),
             ReturnStatus.Failed => StatusCode(StatusCodes.Status500InternalServerError),
             ReturnStatus.Created => Created(),
-            ReturnStatus.SuccessNoContent => StatusCode(StatusCodes.Status201Created),
+            ReturnStatus.SuccessNoContent => NoContent(),
             _ => Ok()
         };
 
